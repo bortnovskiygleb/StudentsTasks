@@ -1,0 +1,11 @@
+commit 5c5688ddb7d0c25154ae6c1d435fd0f28d44fc49 (HEAD -> master)
+Author: Gleb <bortnovskiygleb@gamil.com>
+Date:   Tue Feb 12 22:23:33 2019 +0200
+
+    add status.txt
+
+commit 7b6bf3a46e49550ef44bf19ed9a914abedbeafb6
+Author: Gleb <bortnovskiygleb@gamil.com>
+Date:   Tue Feb 12 22:21:48 2019 +0200
+
+    add .gitignore

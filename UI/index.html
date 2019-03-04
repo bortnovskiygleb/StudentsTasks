@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Photo Cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="all_elements">
+    <header class="header">
+        <div class="name">
+            <b>
+                Bortnovskiy Gleb
+            </b>
+        </div>
+        <div class="app" style="font-style:italic">
+            <b >Photo Cards</b>
+        </div>
+    </header>
+    <div class="about_profile">
+        <div class="inform">
+            <table class="table_inform">
+                <tr>
+                    <td class="td_inform">Location</td>
+                    <td class="td_inform">Age</td>
+                    <td class="td_inform">Education</td>
+                </tr>
+                <tr>
+                    <td class="td_inform" style="color:rgb(127, 38, 150)"><b>Minsk</b></td>
+                    <td class="td_inform" style="color:rgb(127, 38, 150)"><b>18</b></td>
+                    <td class="td_inform" style="color:rgb(127, 38, 150)"><b>BSU FAMCS</b></td>
+                </tr>
+                
+            </table>
+        </div>
+        <div class="profile">
+            <div class="nickname_photo">
+                    <div class="profiles_name" style="color:rgb(156, 22, 22)">
+                            Gleb Bortnovskiy              
+                    </div>
+                <div class="photo_profile">
+                    <img src="profiles_photo.jpg" alt="profiles_photo" height="100">
+                </div>
+            </div>
+            <table class="table_follow">
+                <tr>
+                    <td class="table_td_follow">
+                        Followers
+                    </td>
+                    <td class="table_td_follow">
+                        Following
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_td_follow" style="color:rgb(127, 38, 150)">
+                        <b>132</b>
+                    </td>
+                    <td class="table_td_follow" style="color:rgb(127, 38, 150)">
+                        <b>140</b>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="main">
+        <div class="posts">
+            <div class="photopost">
+                <div class="name_post">
+                    <div class="mini_photo">
+                        <img src="profiles_photo.jpg" alt="mini photo" height="50" style="border-radius: 50px">
+                    </div>
+                    <div class="name_acc">
+                        <div style="font-size:24px">Bortnovskiy Gleb</div>
+                        <div>23.08.2018</div>
+                    </div>
+                    <button class="crest">
+                            <img src="crest.png" height="30" style="margin-left: -8px; margin-top: -3px">
+                        </button>
+                    <button class="button_6">
+                        <img src="6.jpg" height="50" style="margin-left: -8px; margin-top: -3px">
+                    </button>
+                </div>
+                <div class="photo">
+                    <img src="Minsk.jpg" alt="photo Minsk" width="750">
+                </div>
+                <div class="hashtags">
+                    #Minsk#Belarus
+                </div>
+                    <button class="like">
+                        <img src="heart.jpg" alt="like" width="42.5" style="margin-left: -8px; margin-top: -3px">
+                    </button>
+                <div class="about_photo">
+                    Nice day!
+                </div>
+            </div>
+            <div class="photopost">
+                    <div class="name_post">
+                        <div class="mini_photo">
+                            <img src="profiles_photo.jpg" alt="mini photo" height="50" style="border-radius: 50px">
+                        </div>
+                        <div class="name_acc">
+                            <div style="font-size:24px">Bortnovskiy Gleb</div>
+                            <div>23.08.2018</div>
+                        </div>
+                        <button class="crest">
+                                <img src="crest.png" height="30" style="margin-left: -8px; margin-top: -3px">
+                            </button>
+                        <button class="button_6">
+                            <img src="6.jpg" height="50" style="margin-left: -8px; margin-top: -3px">
+                        </button>
+                    </div>
+                    <div class="photo">
+                        <img src="Minsk2.jpg" alt="photo Minsk" width="750">
+                    </div>
+                    <div class="hashtags">
+                        #Minsk#Belarus
+                    </div>
+                        <button class="like">
+                            <img src="heart.jpg" alt="like" width="42.5" style="margin-left: -8px; margin-top: -3px">
+                        </button>
+                    <div class="about_photo">
+                        Beautiful town!
+                    </div>
+                </div>
+        </div>
+        <div class="right_tape">
+            <button class="add_photo"> Add photopost</button>
+            <div class="filters">
+                <div class="name_filters">
+                    Filters
+                </div>
+                <input type="date" placeholder="Enter date" size="20" maxlength="10" class="inDate">
+                <input type="text" placeholder="Hashtags" size="17" class="inHashtag" list="hashtags">
+                <datalist id="hashtags">
+                    <option>#BSU</option>
+                    <option>#Minsk</option>
+                    <option>#Belarus</option>
+                </datalist> 
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="BSU">
+            BSU 2019
+        </div>
+        <div class="name_development">
+            @BortnovskiyGleb
+        </div>
+    </footer>
+</div>
+</body>
+</html>

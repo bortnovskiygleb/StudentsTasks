@@ -181,23 +181,31 @@ function getPhotoPosts(skip, top, filterConfig = ''){
     res.sort(compareDates);
     if(filterConfig !== ''){
         res = res.filter(function(element){
-            if(element.id === filterConfig.id) return true;
-            if(element.description === filterConfig.description) return true;
-            if(element.createdAt === filterConfig.createdAt) return true;
-            if(element.author === filterConfig.author) return true;
-            if(element.photoLink === filterConfig.photoLink) return true;
-            let f = true;
-            if(element.hashTags.length === filterConfig.hashTags.length){
-                for (let i = 0; i < element.hashTags.length; i++) {
-                    const e = element.hashTags[i];
-                    if(e !== filterConfig.hashTags[i]){
-                        f = false;
-                        break;
+            for(key in filterConfig){
+                switch (key) {
+                    case 'author':
+                    if(element.author === filterConfig.author) return true;
+                    break;
+                    case 'createdAt':
+                    if(element.createdAt === filterConfig.createdAt) return true;
+                    break;
+                    case 'hashTags':
+                    let f = true;
+                    if(element.hashTags.length === filterConfig.hashTags.length){
+                        for (let i = 0; i < element.hashTags.length; i++) {
+                            const e = element.hashTags[i];
+                            if(e !== filterConfig.hashTags[i]){
+                                f = false;
+                                break;
+                            }
+                            if(f === true) return true;            
+                        }
                     }
-                    if(f === true) return true;            
+                    break;
+                    default:
+                        return false;
                 }
             }
-            return false;
         });
     }
     return res;
@@ -216,7 +224,6 @@ function validatePhotoPost(post){
     if(typeof(post.createdAt) === undefined) return false;
     if(typeof(post.author) === undefined) return false;
     if(typeof(post.photoLink) === undefined) return false;
-    // if(typeof(post.hashTags) === undefined) return false;
     return true;
 }
 

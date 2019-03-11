@@ -1,254 +1,334 @@
 .all_elements{
+    padding: 0.5rem 0.8rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+.header{
+    justify-content: space-between;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    background-color: rgba(61, 60, 60, 0.082);
+}
+
+.header__link {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    text-decoration-line: underline;
+    color: rgb(126, 8, 8);
+}
+
+.header__link:hover{
+    text-decoration: none;
+}
+
+.header__logo {
+    font-size: 2.5em;
+    font-style: italic;
+    color: rgb(14, 3, 112);
+    margin-right: 1.4rem;
+}
+
+@media only screen and (max-width: 320px) {
+    .header__logo {
+      display: none;
+    }
+    .header {
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.user__card,
+.user__info {
+    padding:  0.5rem 0.8rem;
+    flex: 1 1;
+    max-width: 55%;
+}
+
+.user__info{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user__info__text{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.user__info__text__info{
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    text-align: center;
+    color: rgb(52, 3, 97);
+}
+
+.user__info__status,
+.user__info__status__text{
+    justify-content: space-around;
+    width: 80%;
+}
+
+.user__card {
+    flex-direction: column;
+    max-width: 40%;
+    padding-bottom: 1.5rem;
+}
+  
+.user__card__preview {
+    justify-content: space-around;
     width: 100%;
+    margin-bottom: 0.3em;
+}
+.user__card__icon {
+    object-fit: cover;
+    margin-right: 0.3rem;
+    border-radius: 50%;
+}
+  
+.user__card__nick {
+    padding: 0.3rem 0.5rem;
+    font-size: 2em;
+    /* background-color: #fff; */
+}
+
+.user__card__status__info{
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1.7em;
+}
+  
+.user__card__status {
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1.7em;
+}
+ 
+.text__user__cards{
+    color: rgb(52, 3, 97);
+    padding-top: 0.4em;
+}
+
+@media only screen and (max-width: 850px) {
+    .user {
+      flex-direction: column-reverse;
+    }
+  
+    .user__card,
+    .user__info {
+      max-width: 100%;
+    }
+  
+    .user__card {
+      margin-bottom: 1rem;
+    }
+}
+  
+@media only screen and (max-width: 320px) {
+    .user__card__status {
+      flex-direction: column;
+    } 
+    .user__card__preview {
+      flex-direction: column;
+    }
+    .user__card__icon {
+      margin-bottom: 1rem;
+    }
+}
+
+/*==== Main Content ====*/
+.content {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 10fr minmax(300px, 1fr);
+    grid-template-areas: ". posts controls";
+    grid-gap: 2rem;
+}
+  
+.content__posts {
+    grid-area: posts;
+}
+  
+.content__controls {
+    grid-area: controls;
+    flex-direction: column;
+}
+  
+@media only screen and (max-width: 1150px) {
+    .content {
+      grid-template-areas: ". controls ."
+                            ". posts .";
+      grid-template-columns: 1fr 10fr 1fr;
+    }
+}
+  
+@media only screen and (max-width: 700px) {
+    .content {
+      grid-template-areas: ". controls ."
+                           "posts posts posts"
+    }
+}
+  
+@media only screen and (max-width: 400px) {
+    .content {
+      grid-template-areas: "controls controls controls"
+                           "posts posts posts"
+    }
+}
+  
+  
+/*==== Post ====*/
+.post {
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.8rem;
+}
+.post  .font-icon {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+  
+.post__pubdate {
+    font-size: 0.7rem;
+}
+  
+.post__header {
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+  
+.post-name-wrapper {
+    flex-direction: column;
+}
+  
+.post__image-wrapper {
+    max-height: 500px;
+}
+
+.post__image {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+  
+.post__footer {
+    justify-content: space-between;
+    padding: 0.8rem 0.5rem;
+}
+  
+.post__like {
+    justify-content: flex-end;
+}
+ 
+.like{
+    padding-right: 0.5em;
+}
+
+.post__like__names{
+    font-size: 1.2em;
+    padding-right: 0.5em;
+}
+
+.post__info {
+    margin-top: 0.5rem;
+}
+
+/*==== Tags & Add Post ====*/
+.add-post {
+    border: none;
+    font-size: 1.6rem;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 1.2rem;
+    background-color: rgb(103, 40, 155);
+    transition: background-color 75ms linear;
+}
+.add-post:hover {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+.add-post:active {
+  color: #fff;
+  background-color: rgb(62, 23, 94);
+}
+
+.filters {
+  flex-direction: column;
+  background-color: rgba(61, 60, 60, 0.082);
+}
+
+.filters__heading {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-bottom: 0.4rem solid #fff;
+  text-align: center;
+  background-color: rgb(150, 83, 28);
+}
+
+.filters__config {
+  padding: 0 0.5rem 0.5rem;
+}
+
+.filters__input {
+  margin: 0.5rem 0;
+  padding: 0.1rem 0.2rem;
+  width: 100%;
+}
+.tags {
+    margin-bottom: 1rem;
+    width: 80%;
+}
+
+/*==== End Content ====*/
+
+:root {
+    box-sizing: border-box;
+    font-size: calc(16px + 0.2vw);
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+  
+.btn,
+.input {
+    border: none;
+    background-color: transparent;
+}
+.btn:hover,
+.input:hover {
+    cursor: pointer;
+}
+
+
+/*==== Footer ====*/
+
+.footer{
+    justify-content: space-between;
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    background-color: rgba(61, 60, 60, 0.082);
 
 }
-.header{
-    /* background-color: rgb(230, 227, 227); */
-    height: 50px;
-    margin: auto auto auto auto;
-    width: 1200px;
-}
-.name{
-    float: left;
-    margin-left: 100px;
-    height: 50px;
-    color: rgb(163, 46, 46);
-    line-height: 60px;
-    font-size: 18px;
-}
-.app{
-    float: right;
-    color: rgb(14, 3, 112);
-    margin-right: 100px;
-    line-height: 50px;
-    font-size: 48px;
-}
-.footer{
-    /* background-color: rgb(230, 227, 227); */
-    height: 50px;
-    margin: auto auto auto auto;
-    margin-top:10px;
-    width: 1200px;
-}
 .name_development{
-    margin-right: 50px;
-    line-height: 50px;
-    right: 40px;
-    float: right;
+    /* margin-right: 1rem; */
+    font-size: 1.2rem;
 }
 .BSU{
-    line-height: 50px;
-    margin-left: 48.5%;
-    float: left;
-    left: 15px;
-}
-.about_profile{
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
-    width: max-content;
-}
-.profile{
-    background-color: rgb(243, 243, 243);
-    /* background-color:lightblue; */
-    margin-left: 50px;
-    height: 200px;
-    float: left;
-    width: 600px;
-    
-}
-.inform{
-    background-color: rgb(243, 243, 243);
-    /* background-color: rgb(182, 112, 112); */
-    width: 600px;
-    float: left;
-    height: 200px;
-}
-.nickname_photo{
-    /* background-color: rgb(70, 150, 46); */
-    margin-top: 8px;
-    margin-left: 50px;
-    width: 500px;
-    height: 100px;
-}
-.photo_profile{
-    /* background-color: rgb(44, 5, 49); */
-    height: 100px;
-    width: 100px;
-    float: left;
-    overflow: hidden;
-    border-radius: 100px;
-    margin-left: 30px;
-}
-.profiles_name{
-    width: 300px;
-    margin-left: 10px;
-    margin-top: 25px;
-    line-height: 50px;
-    font-size: 32px;
-    height: 50px;
-    float: left;
-    position: relative;
-    /* background-color: brown; */
-    text-align: center;
-}
-.table_follow{
-    border-collapse: collapse;
-    margin-left: 50px;
-    width: 500px;
-}
-.table_td_follow{
-    height: 40px;
-    text-align: center;
-    font-size: 32px;
-}
-.table_inform{
-    border-collapse: separate;
-    border-spacing: 10px;
-    margin-top: 40px;
-    margin-left: 45px;
-    width: 510px;
-}
-.td_inform{
-    /* width: 170px; */
-    /* border: 1px solid black; */
-    height: 40px;
-    text-align: center;
-    font-size: 32px;
-}
-.main{
-    /* border: 1px solid yellow; */
-    margin-top: 10px;
-    height: 1400px;
-    width: 1300px;
-}
-.posts{
-    margin-top: 10px;
-    /* border: 1px solid rgb(80, 38, 38); */
-    float: left;
-    width: 750px;
-    height: 1400px;
-    margin-left: 200px;
-    margin-right: 100px;
-}
-.photopost{
-    border: 2px solid rgb(148, 156, 155);
-    margin-top: 10px;
-    height: 680px;
-}
-.photo{
-    margin-top: 10px;
-    width: 750;
-    /* border: 1px solid rgb(16, 123, 200); */
-    height: 500px;
-    overflow: hidden;
-}
-.hashtags{
-    /* border: 1px solid yellow; */
-    margin-left: 10px;
-    margin-top: 10px;
-    font-size: 24px;
-    float: left;
-    height: 30px;
-    width: 650px;
-}
-.like{
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-    height: 37.8px;
-    width: 42.5px;
-}
-.about_photo{
-    float: left;
-    margin-left: 10px;
-    margin-top: 20px;
-    margin-right: 10px;
-    /* border: 1px solid black; */
-    font-size: 18px;
-    height: 40px;
-    width: 720px;    
-}
-.name_post{
-    margin-top: 5px;
-    height: 50px;
-}
-.mini_photo{
-    float: left;
-    margin-left: 5px;
-    height: 50px;
-    width: 50px;
-}
-.name_acc{
-    margin-left: 15px;
-    float: left;
-    height: 50px;
-}
-.button_6{
-    float: right;
-    height: 50px;
-    width: 50px;
-}
-.crest{
-    margin-top: 10px;
-    margin-right: 5px;
-    float: right;
-    height: 30px;
-    width: 30px;
-}
-.right_tape{
-    /* position: fixed; */
-    /* border: 1px solid rgb(47, 145, 2); */
-    float: right;
-    margin-top: 30px;
-    width: 200px;
-    margin-right: 50px;
-    
-    height: 400px;
-}
-.add_photo{
-    background-color: blueviolet;
-    /* border: 1px solid black; */
-    margin-top: 10px;
-    width: 204px;
-    height: 40px;
-    font-size: 18px;
-    text-align: center;
-}
-.filters{
-    border: 2px solid black;
-    margin-top: 40px;
-    width: 200px;
-    height: 200px;
-}
-.name_filters{
-    font-size: 24px;
-    line-height: 40px;
-    text-align: center;
-    height: 40px;
-    background-color: rgb(201, 57, 57);
-}
-.inDate{
-    /* margin-left: -1px; */
-    margin-top: 20px;
-    margin-left: 20px;
-    height: 40px;
-    width: 150px;
-    text-align: center;
-    font-size: 16px;
-}
-.inHashtag{
-    margin-top: 20px;
-    margin-left: 20px;
-    height: 40px;
-    width: 150px;
-    text-align: center;
-    font-size: 18px;
-}
-div{
-    font-family: Arial, Helvetica, sans-serif;
-}
-td{
-    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 1.5rem;
+    font-size: 1.2rem;
 }

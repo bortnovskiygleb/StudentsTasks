@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Photo Cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">    
+</head>
+<body>
+    <script src="script2.js"></script>
+    <script src="View.js"></script>
+    <script src="globFunc2.js"></script>
+    <div class="all_elements">
+        <header class="header flex">
+        <div id="name__user">
+            <a class="header__link" href="#" >Sign Up</a>
+            <a class="header__link" href="#" >Log In</a>
+        </div>
+        <div class="header__logo"><b>Photo Cards</b></div>
+        </header>
+
+        <article class="user">
+        <section class="user__info flex" >
+            <div class="user__info__status flex">
+                <div class="user__info__text">Location</div>
+                <div class="user__info__text__info">Minsk</div>
+            </div>
+            <div class="user__info__status flex">
+                <div class="user__info__text">Age</div>
+                <div class="user__info__text__info">18</div>                
+            </div>
+            <div class="user__info__status__text flex">
+                <div class="user__info__text">Education</div>
+                <div class="user__info__text__info">BSU FAMCS</div>
+            </div>
+        </section>
+        <section class="user__card flex">
+            <div class="user__card__preview flex">
+                <p class="user__card__nick" id="username">Bortnobskiy Gleb</p>
+                <img class="user__card__icon" src="profiles_photo.jpg" alt="user icon" width="100" height="100">  
+            </div>
+            <div class="user__card__status flex">
+                <div>Followers</div>
+                <div>Following</div>
+            </div>
+            <div class="user__card__status__info flex">
+                <div class="text__user__cards">130</div>
+                <div class="text__user__cards">156</div>
+            </div>
+        </section>
+        </article>
+
+        <article class="content">
+            <div class="content__posts" id="lenta">
+            </div>
+      
+            <aside class="content__controls flex">
+                <button class="add-post" id="add-but">Add photopost</button>
+              
+                <div class="filters flex">
+                    <h2 class="filters__heading">Filters</h2>
+
+
+                    <select class="tags"  id="user__list">
+                        <option selected="selected">Select name user</option>
+                    </select>
+
+                    <div class="filters__config">
+                        <input class="filters__input" type="text" placeholder="Enter data">
+                    </div>
+
+                    
+                    <select class="tags">
+                        <option value="BSU">#BSU</option>
+                        <option value="LOVE">#Minsk</option>
+                        <option value="YOU">#FAMCS</option>
+                    </select>
+                </div>
+            </aside>
+        </article>
+
+        <footer class="footer flex">
+        <div class="BSU">
+            BSU 2019
+        </div>
+        <div class="name_development">
+            @BortnovskiyGleb
+        </div>
+        </footer>
+</div>
+</body>
+</html>

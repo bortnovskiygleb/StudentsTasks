@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Photo Cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">    
+</head>
+<body>
+    <div class="all_elements">
+        <header class="header flex">
+        <div id="name__user">
+            <input class="header__link" type="button" id="sign_in"  value="Sign In"/>
+            <input class="header__link" type="button" id="log_in" value="Log In"/>
+        </div>
+        <div class="header__logo"><b>Photo Cards</b></div>
+        </header>
+
+        <article class="user">
+        <section class="user__info flex" >
+            <div class="user__info__status flex">
+                <div class="user__info__text">Location</div>
+                <div class="user__info__text__info">Minsk</div>
+            </div>
+            <div class="user__info__status flex">
+                <div class="user__info__text">Age</div>
+                <div class="user__info__text__info">18</div>                
+            </div>
+            <div class="user__info__status__text flex">
+                <div class="user__info__text">Education</div>
+                <div class="user__info__text__info">BSU FAMCS</div>
+            </div>
+        </section>
+        <section class="user__card flex">
+            <div class="user__card__preview flex">
+                <p class="user__card__nick" id="username">Bortnobskiy Gleb</p>
+                <img class="user__card__icon" src="profiles_photo.jpg" alt="user icon" width="100" height="100">  
+            </div>
+            <div class="user__card__status flex">
+                <div>Followers</div>
+                <div>Following</div>
+            </div>
+            <div class="user__card__status__info flex">
+                <div class="text__user__cards">130</div>
+                <div class="text__user__cards">156</div>
+            </div>
+        </section>
+        </article>
+
+        <article class="content">
+            <div class="content__posts" id="lenta">
+            </div>
+      
+            <aside class="content__controls flex">
+                <button class="add-post" id="add-but">Add photopost</button>
+              
+                <div class="filters flex">
+                    <h2 class="filters__heading">Filters</h2>
+
+
+                    <select id="userNameFilter" class="tags">
+                        <option selected="selected">Select name user</option>
+                    </select>
+
+                    <!-- <div class="filters__config">
+                        <input class="filters__input" type="text" placeholder="Enter data">
+                    </div> -->
+
+                    <input id="tagFilter" class="tags" placeholder="#HashTag">
+    
+                </div>
+            </aside>
+        </article>
+
+        <div id="add_photopost_all" class="all_elements">
+                <div class="back_to_start"><button id="back_to_start_add_in" class="input__enter__sign__in" name="Back">Back</button></div>
+            <div class="flex" style="justify-content: space-between;">
+                <div class="description__post"><textarea cols="80" rows="14" autofocus placeholder="Something" name="description_post" class="description__input"></textarea>
+                </div>
+                <div>
+                    <img id="image__post" class="preview__photo">
+                    <p><input type="file" id="f__post"></p>
+                </div>
+            </div>
+            <div class="description__post"><textarea cols="80" rows="3" placeholder="#HashTags" name="hashTags" class="description__input"></textarea>
+            <div id="btn_add" class="add__button__post"><button class="input__enter__sign__in" name="Add_photopost">Add photopost</button></div>
+            <div id="btn_chng" class="change__button__post"><button class="input__enter__sign__in" name="Change_photopost">Change photopost</button></div>
+            </div>
+
+        </div>
+
+        <article class="login_main">
+            <div>
+                <h1 class="sign__in__name">Login</h1>
+                <div class="back_to_start"><button id="back_to_start_log_in" class="input__enter__sign__in" name="Back">Back</button></div>
+                <h5 class="title__inputs">Username</h5>
+                <p class="inputs__sign__in"><input type="text" name="Username" required autofocus></p>
+                <h5 class="title__inputs">Password</h5>
+                <p class="inputs__sign__in"><input type="password" name="Password" required></p>
+                <h6 class="text__if__sign__in">If you don't have an account you can <button class="login__link__log__in">Sign in</button></h6>
+                <div class="enter__sign__in"><button id="input__enter__log__in" class="input__enter__sign__in" name="Enter">Enter</button></div>
+            </div>
+        </article>
+
+        <article class="sign_in_main">
+            <div>
+                <!-- <h1 class="sign__in__name">Sign In</h1> -->
+                <div class="back_to_start"><button id="back_to_start_sign_in" class="input__enter__sign__in" name="Back">Back</button></div>
+                <h5 class="title__inputs">Username</h5>
+                <p class="inputs__sign__in"><input type="text" name="Username" required autofocus></p>
+                <h5 class="title__inputs">Email</h5>
+                <p class="inputs__sign__in"><input type="email" name="Email" required></p>
+                <h5 class="title__inputs">Password</h5>
+                <p class="inputs__sign__in"><input type="password" name="Password" required></p>
+                <h6 class="text__if__sign__in">If you have an account already you can <button class="login__link__sign__in" >Login</button></h6>
+                <div class="enter__sign__in"><button id="input__enter__sign__in" class="input__enter__sign__in" name="Enter">Enter</button></div>
+            </div>
+        </article>
+<footer class="footer flex">
+    <div class="BSU">
+        BSU 2019
+    </div>
+    <div class="name_development">
+        @BortnovskiyGleb
+    </div>
+    </footer>
+</div>
+<script src="Events.js"></script>
+<script src="script2.js"></script>
+<script src="View.js"></script>
+<script src="globFunc2.js"></script>
+    
+</body>
+
+</html>
